@@ -9,9 +9,11 @@ It performs:
 - A filesystem vulnerability scan
 - Secret detection
 - Infrastructure and configuration scanning
-- Dependency-change review for high and critical vulnerabilities
+- Dependency vulnerability scanning for high and critical findings
 
 The repository scan also runs after changes reach `main`, every Monday, and when manually requested.
+
+GitHub's dependency-review action is not currently available because the repository dependency graph is disabled. Trivy scans supported package manifests and lockfiles without relying on that repository feature. Dependency review can be added as a separate required check after the dependency graph is enabled.
 
 ## Required GitHub ruleset
 
@@ -20,10 +22,9 @@ The workflow cannot prevent direct pushes by itself. Configure a branch ruleset 
 1. Require a pull request before merging.
 2. Require status checks to pass.
 3. Add `Repository scan` as a required check.
-4. Add `Dependency review` as a required check.
-5. Require branches to be up to date before merging.
-6. Block force pushes and branch deletion.
-7. Do not allow bypasses except for a documented emergency administrator process.
+4. Require branches to be up to date before merging.
+5. Block force pushes and branch deletion.
+6. Do not allow bypasses except for a documented emergency administrator process.
 
 These settings ensure security checks run before a change can be merged into `main`.
 
