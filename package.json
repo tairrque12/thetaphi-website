@@ -4,6 +4,9 @@
   "description": "Digital chapter platform for the Theta Phi Chapter of Kappa Alpha Psi Fraternity, Inc.",
   "private": true,
   "type": "module",
+  "engines": {
+    "node": ">=24.15.0"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -44,13 +47,13 @@
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.5",
     "@vitejs/plugin-react": "^6.1.1",
-    "eslint": "^10.9.1",
+    "eslint": "^9.39.5",
     "eslint-config-next": "^16.3.4",
     "jsdom": "^30.0.1",
     "postcss": "^8.5.26",
     "supabase": "^2.116.0",
     "tailwindcss": "^4.3.3",
-    "typescript": "^7.0.2",
+    "typescript": "^6.0.3",
     "vitest": "^4.1.11"
   }
 }
