@@ -1,0 +1,2 @@
+-- Intentionally empty. Never use legacy brother data in development seeds.
+-- Automated tests must create synthetic records within their own transactions.

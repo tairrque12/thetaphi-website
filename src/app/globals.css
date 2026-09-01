@@ -1,0 +1,283 @@
+@import "tailwindcss";
+
+:root {
+  --crimson-950: #360009;
+  --crimson-900: #52000e;
+  --crimson-800: #740018;
+  --crimson-700: #9d0b26;
+  --cream-50: #fffaf0;
+  --cream-100: #f8ecd4;
+  --ink: #211a1a;
+  --muted: #756767;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--cream-50);
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 90% 8%, rgb(157 11 38 / 10%), transparent 28rem),
+    var(--cream-50);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-header {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: min(100% - 2rem, 72rem);
+  min-height: 5.25rem;
+  margin-inline: auto;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.brand-mark {
+  display: grid;
+  width: 2.75rem;
+  height: 2.75rem;
+  place-items: center;
+  border: 1px solid rgb(82 0 14 / 28%);
+  border-radius: 50%;
+  color: var(--cream-50);
+  background: var(--crimson-900);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.9rem;
+  letter-spacing: -0.08em;
+}
+
+.brand strong,
+.brand small {
+  display: block;
+}
+
+.brand strong {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.05rem;
+}
+
+.brand small {
+  display: none;
+  margin-top: 0.15rem;
+  color: var(--muted);
+  font-size: 0.68rem;
+}
+
+.header-login {
+  border-bottom: 1px solid var(--crimson-800);
+  color: var(--crimson-900);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  min-height: 36rem;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  padding: 4.5rem 1rem 6rem;
+  color: white;
+  background:
+    linear-gradient(135deg, rgb(54 0 9 / 98%), rgb(116 0 24 / 91%)),
+    var(--crimson-900);
+}
+
+.hero::after {
+  position: absolute;
+  right: -4rem;
+  bottom: -8rem;
+  z-index: -1;
+  color: rgb(255 255 255 / 4%);
+  content: "ΚΑΨ";
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(10rem, 46vw, 27rem);
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.hero-glow {
+  position: absolute;
+  top: -8rem;
+  left: -10rem;
+  z-index: -1;
+  width: 24rem;
+  height: 24rem;
+  border-radius: 50%;
+  background: rgb(248 236 212 / 13%);
+  filter: blur(1rem);
+}
+
+.hero > :not(.hero-glow) {
+  width: min(100%, 65rem);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.eyebrow {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+  color: var(--cream-100);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  max-width: 54rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.6rem, 11vw, 5.5rem);
+  font-weight: 500;
+  letter-spacing: -0.045em;
+  line-height: 0.98;
+  text-wrap: balance;
+}
+
+.hero-copy {
+  max-width: 39rem;
+  margin-top: 0;
+  margin-bottom: 2.25rem;
+  color: rgb(255 250 240 / 82%);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.hero-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.primary-action,
+.secondary-action {
+  display: inline-flex;
+  min-height: 3.25rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 1.25rem;
+  border: 1px solid var(--cream-100);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.primary-action {
+  color: var(--crimson-950);
+  background: var(--cream-100);
+}
+
+.secondary-action {
+  color: var(--cream-50);
+  background: transparent;
+}
+
+.highlights {
+  display: grid;
+  width: min(100% - 2rem, 65rem);
+  gap: 1px;
+  margin: -2.5rem auto 4rem;
+  background: rgb(82 0 14 / 16%);
+  box-shadow: 0 1.5rem 4rem rgb(54 0 9 / 13%);
+}
+
+.highlight-card {
+  min-height: 14rem;
+  padding: 1.5rem;
+  background: var(--cream-50);
+}
+
+.card-number {
+  color: var(--crimson-700);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.highlight-card h2 {
+  margin: 2rem 0 0.75rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.75rem;
+  font-weight: 500;
+}
+
+.highlight-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+@media (min-width: 42rem) {
+  .site-header {
+    min-height: 6.5rem;
+  }
+
+  .brand small {
+    display: block;
+  }
+
+  .hero {
+    min-height: 42rem;
+    padding-inline: 2rem;
+  }
+
+  .hero-actions {
+    flex-direction: row;
+  }
+
+  .primary-action,
+  .secondary-action {
+    min-width: 12rem;
+  }
+
+  .highlights {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .primary-action,
+  .secondary-action,
+  .header-login {
+    transition:
+      color 160ms ease,
+      background-color 160ms ease,
+      transform 160ms ease;
+  }
+
+  .primary-action:hover,
+  .secondary-action:hover {
+    transform: translateY(-2px);
+  }
+
+  .secondary-action:hover {
+    color: var(--crimson-950);
+    background: var(--cream-100);
+  }
+}

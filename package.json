@@ -1,0 +1,56 @@
+{
+  "name": "theta-phi-chapter-platform",
+  "version": "0.1.0",
+  "description": "Digital chapter platform for the Theta Phi Chapter of Kappa Alpha Psi Fraternity, Inc.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "supabase:start": "supabase start",
+    "supabase:stop": "supabase stop",
+    "supabase:test": "supabase test db"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tairrque12/thetaphi-website.git"
+  },
+  "keywords": [
+    "theta-phi",
+    "chapter-management"
+  ],
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/tairrque12/thetaphi-website/issues"
+  },
+  "homepage": "https://github.com/tairrque12/thetaphi-website#readme",
+  "dependencies": {
+    "@supabase/ssr": "^0.12.5",
+    "@supabase/supabase-js": "^2.112.4",
+    "next": "^16.3.4",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "zod": "^4.5.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
+    "@testing-library/jest-dom": "^7.0.1",
+    "@testing-library/react": "^16.3.3",
+    "@types/node": "^26.4.1",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.5",
+    "@vitejs/plugin-react": "^6.1.1",
+    "eslint": "^10.9.1",
+    "eslint-config-next": "^16.3.4",
+    "jsdom": "^30.0.1",
+    "postcss": "^8.5.26",
+    "supabase": "^2.116.0",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^7.0.2",
+    "vitest": "^4.1.11"
+  }
+}
