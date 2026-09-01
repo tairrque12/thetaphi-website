@@ -1,6 +1,6 @@
 # Theta Phi Chapter Digital Platform Blueprint
 
-Status: Planning review  
+Status: Planning review
 Application implementation: Not started
 
 ## 1. Product goal
@@ -542,4 +542,3 @@ Before Slice 1 implementation begins, chapter reviewers should approve:
 - Treatment of Chapter Invisible records
 - Import exception classifications
 - Slice 1 acceptance tests
-
