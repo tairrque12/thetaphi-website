@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+
+# Next.js
+.next/
+out/
+*.tsbuildinfo
+
+# Tests
+coverage/
+playwright-report/
+test-results/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Supabase local state
+supabase/.branches/
+supabase/.temp/
+
+# Editor and system files
+.DS_Store
+*.swp
+
+# Logs
+*.log
+npm-debug.log*
