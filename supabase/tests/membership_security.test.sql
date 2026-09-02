@@ -2,7 +2,7 @@ begin;
 
 create extension if not exists pgtap with schema extensions;
 
-select plan(11);
+select plan(17);
 
 select enum_has_labels(
   'public',
@@ -62,6 +62,48 @@ select policies_are(
   'profile_invitations',
   array['management_read_invitations'],
   'only management can read profile invitations'
+);
+
+select has_function(
+  'public',
+  'get_invitation_preview',
+  array['text'],
+  'invitation preview function exists'
+);
+
+select has_function(
+  'public',
+  'claim_profile',
+  array['text'],
+  'atomic profile claim function exists'
+);
+
+select has_function(
+  'public',
+  'complete_own_onboarding',
+  array['jsonb'],
+  'onboarding update function exists'
+);
+
+select has_function(
+  'public',
+  'create_profile_invitation',
+  array['uuid', 'text', 'text', 'timestamp with time zone'],
+  'management invitation creation function exists'
+);
+
+select has_function(
+  'public',
+  'revoke_profile_invitation',
+  array['uuid'],
+  'management invitation revocation function exists'
+);
+
+select has_trigger(
+  'public',
+  'brother_profiles',
+  'create_default_profile_privacy',
+  'every new profile receives private defaults'
 );
 
 select * from finish();

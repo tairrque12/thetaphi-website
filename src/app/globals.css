@@ -281,3 +281,356 @@ a {
     background: var(--cream-100);
   }
 }
+
+.auth-shell,
+.onboarding-shell,
+.dashboard-shell {
+  min-height: 100vh;
+  padding: 1rem;
+  background:
+    radial-gradient(circle at 95% 5%, rgb(157 11 38 / 15%), transparent 20rem),
+    var(--cream-50);
+}
+
+.auth-shell {
+  display: grid;
+  place-items: center;
+}
+
+.auth-card,
+.onboarding-card {
+  width: min(100%, 38rem);
+  padding: 1.5rem;
+  border: 1px solid rgb(82 0 14 / 12%);
+  background: rgb(255 250 240 / 94%);
+  box-shadow: 0 1.5rem 4rem rgb(54 0 9 / 10%);
+}
+
+.auth-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 3.5rem;
+  color: var(--crimson-900);
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 700;
+}
+
+.auth-brand span {
+  display: grid;
+  width: 2.5rem;
+  height: 2.5rem;
+  place-items: center;
+  border-radius: 50%;
+  color: white;
+  background: var(--crimson-900);
+  font-size: 0.75rem;
+}
+
+.auth-eyebrow {
+  color: var(--crimson-700);
+}
+
+.auth-card h1,
+.onboarding-card h1 {
+  margin: 0 0 1rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.25rem, 10vw, 3.75rem);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.auth-copy {
+  margin: 0 0 1.75rem;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.auth-form,
+.field-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.auth-form label,
+.field-grid label,
+.status-options legend {
+  color: var(--crimson-950);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.auth-form input,
+.field-grid input {
+  width: 100%;
+  min-height: 3.25rem;
+  margin-top: 0.4rem;
+  padding: 0.75rem;
+  border: 1px solid rgb(82 0 14 / 25%);
+  border-radius: 0;
+  color: var(--ink);
+  background: white;
+  font: inherit;
+}
+
+.auth-form input:focus,
+.field-grid input:focus {
+  border-color: var(--crimson-700);
+  outline: 3px solid rgb(157 11 38 / 13%);
+}
+
+.auth-form button,
+.wide-action {
+  display: inline-flex;
+  width: 100%;
+  min-height: 3.4rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--crimson-900);
+  color: white;
+  background: var(--crimson-900);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.auth-help {
+  margin: 1.25rem 0 0;
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.55;
+}
+
+.notice {
+  margin-bottom: 1.25rem;
+  padding: 0.85rem 1rem;
+  border-left: 3px solid;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.notice.success {
+  border-color: #237a46;
+  color: #174b2d;
+  background: #edf8f1;
+}
+
+.notice.error {
+  border-color: var(--crimson-700);
+  color: var(--crimson-950);
+  background: #fff0f1;
+}
+
+.text-link {
+  color: var(--crimson-800);
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 0.2rem;
+}
+
+.claim-card {
+  text-align: center;
+}
+
+.step-label {
+  margin-bottom: 2rem;
+  color: var(--muted);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.profile-preview {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 2rem 0;
+  padding: 2rem 1rem;
+  border: 1px solid rgb(82 0 14 / 13%);
+  background: white;
+}
+
+.profile-monogram {
+  display: grid;
+  width: 5rem;
+  height: 5rem;
+  margin-bottom: 1rem;
+  place-items: center;
+  border-radius: 50%;
+  color: white;
+  background: var(--crimson-900);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.5rem;
+}
+
+.profile-preview strong {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.6rem;
+}
+
+.profile-preview span,
+.profile-preview small {
+  margin-top: 0.35rem;
+  color: var(--muted);
+}
+
+.onboarding-shell {
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+
+.onboarding-card {
+  margin-inline: auto;
+}
+
+.onboarding-form section[hidden] {
+  display: none;
+}
+
+.status-options {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0 0 1.5rem;
+  padding: 0;
+  border: 0;
+}
+
+.status-options legend {
+  margin-bottom: 0.75rem;
+}
+
+.status-options label {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  min-height: 4.5rem;
+  padding: 0.85rem;
+  border: 1px solid rgb(82 0 14 / 17%);
+  background: white;
+}
+
+.status-options input {
+  width: 1.15rem;
+  height: 1.15rem;
+  accent-color: var(--crimson-800);
+}
+
+.status-options span,
+.status-options strong,
+.status-options small {
+  display: block;
+}
+
+.status-options small,
+.field-grid label > small {
+  margin-top: 0.3rem;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.field-grid {
+  margin-bottom: 1.5rem;
+}
+
+.privacy-options {
+  display: grid;
+  margin-bottom: 1.5rem;
+  border-top: 1px solid rgb(82 0 14 / 13%);
+}
+
+.privacy-options label {
+  display: flex;
+  min-height: 3.8rem;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(82 0 14 / 13%);
+  font-weight: 700;
+}
+
+.privacy-options input {
+  width: 1.3rem;
+  height: 1.3rem;
+  accent-color: var(--crimson-800);
+}
+
+.onboarding-actions {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.75rem;
+}
+
+.back-action {
+  min-height: 3.4rem;
+  padding: 0.8rem 1rem;
+  border: 1px solid rgb(82 0 14 / 20%);
+  color: var(--crimson-900);
+  background: transparent;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.portal-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: min(100%, 65rem);
+  margin-inline: auto;
+  padding-block: 0.75rem;
+  color: var(--crimson-950);
+  font-weight: 800;
+}
+
+.dashboard-welcome {
+  width: min(100%, 65rem);
+  margin: 4rem auto 0;
+  padding: 2rem;
+  color: white;
+  background: linear-gradient(135deg, var(--crimson-950), var(--crimson-800));
+}
+
+.dashboard-welcome h1 {
+  margin: 0 0 1rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.5rem, 10vw, 4.5rem);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+}
+
+.dashboard-welcome p {
+  max-width: 35rem;
+  color: rgb(255 250 240 / 80%);
+  line-height: 1.6;
+}
+
+.verified-badge {
+  display: inline-flex;
+  margin-top: 1rem;
+  padding: 0.65rem 0.85rem;
+  color: var(--crimson-950);
+  background: var(--cream-100);
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+@media (min-width: 42rem) {
+  .auth-card,
+  .onboarding-card {
+    padding: 2.5rem;
+  }
+
+  .field-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .full-field {
+    grid-column: 1 / -1;
+  }
+}
