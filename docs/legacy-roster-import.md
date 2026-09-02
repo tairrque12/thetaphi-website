@@ -1,6 +1,6 @@
 # Legacy Roster Import Review
 
-Status: Dry run only  
+Status: Dry run only
 Production records created: 0
 
 ## Safety decision
