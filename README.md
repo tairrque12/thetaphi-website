@@ -3,6 +3,7 @@
 Mobile-first digital chapter platform for the Theta Phi Chapter of Kappa Alpha Psi Fraternity, Inc.
 
 - [Product blueprint](docs/product-blueprint.md)
+- [Legacy roster import review](docs/legacy-roster-import.md)
 - [Security policy and required branch rules](SECURITY.md)
 
 ## Local development
@@ -30,4 +31,10 @@ Database tests require Docker:
 ```bash
 npm run supabase:start
 npm run supabase:test
+```
+
+Legacy member data must remain outside Git. Generate a private dry-run review with:
+
+```bash
+npm run roster:review -- --input /private/path/to/layout.txt
 ```
