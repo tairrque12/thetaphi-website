@@ -15,6 +15,7 @@ test-results/
 .env
 .env.*
 !.env.example
+private/
 
 # Supabase local state
 supabase/.branches/

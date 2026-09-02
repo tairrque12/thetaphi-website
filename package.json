@@ -14,6 +14,7 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",
+    "roster:review": "tsx scripts/review-legacy-roster.ts",
     "supabase:start": "supabase start",
     "supabase:stop": "supabase stop",
     "supabase:test": "supabase test db"
@@ -54,6 +55,7 @@
     "postcss": "^8.5.26",
     "supabase": "^2.116.0",
     "tailwindcss": "^4.3.3",
+    "tsx": "^4.23.13",
     "typescript": "^6.0.3",
     "vitest": "^4.1.11"
   }
