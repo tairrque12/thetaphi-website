@@ -261,6 +261,189 @@ a {
   }
 }
 
+.management-shell {
+  width: min(100% - 2rem, 72rem);
+  margin-inline: auto;
+  padding: 2rem 0 5rem;
+}
+
+.management-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.management-header h1 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+}
+
+.management-header p {
+  max-width: 37rem;
+  color: var(--muted);
+}
+
+.management-header a {
+  color: var(--crimson-800);
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.import-panel {
+  margin-bottom: 1.5rem;
+  padding: 1.25rem;
+  color: white;
+  background: var(--crimson-950);
+}
+
+.import-panel h2 {
+  margin-top: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 500;
+}
+
+.import-panel p {
+  color: rgb(255 250 240 / 78%);
+  line-height: 1.5;
+}
+
+.import-panel form,
+.review-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.import-panel button,
+.promote-action,
+.approve-action {
+  min-height: 2.75rem;
+  padding: 0.65rem 0.9rem;
+  border: 0;
+  color: var(--crimson-950);
+  background: var(--cream-100);
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.review-filters {
+  margin-bottom: 1rem;
+}
+
+.review-filters a {
+  padding: 0.55rem 0.75rem;
+  border: 1px solid rgb(82 0 14 / 18%);
+  color: var(--crimson-900);
+  background: white;
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.review-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.review-card {
+  padding: 1.25rem;
+  border: 1px solid rgb(82 0 14 / 14%);
+  background: white;
+}
+
+.review-card > header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.review-card h2 {
+  margin: 0.45rem 0 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 500;
+}
+
+.review-card header small {
+  color: var(--crimson-700);
+  text-align: right;
+}
+
+.record-state {
+  color: var(--muted);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.record-state.chapter_invisible {
+  color: var(--crimson-800);
+}
+
+.record-form {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.record-form label {
+  color: var(--crimson-950);
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.record-form input,
+.record-form select {
+  display: block;
+  width: 100%;
+  min-height: 2.75rem;
+  margin-top: 0.35rem;
+  padding: 0.6rem;
+  border: 1px solid rgb(82 0 14 / 22%);
+  background: white;
+  font: inherit;
+}
+
+.record-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  grid-column: 1 / -1;
+}
+
+.record-actions button {
+  min-height: 2.75rem;
+  padding: 0.65rem 0.9rem;
+  border: 1px solid rgb(82 0 14 / 20%);
+  color: var(--crimson-900);
+  background: transparent;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.record-actions .approve-action {
+  color: white;
+  background: var(--crimson-900);
+}
+
+.empty-state,
+.imported-message {
+  padding: 2rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+@media (min-width: 48rem) {
+  .record-form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .primary-action,
   .secondary-action,
